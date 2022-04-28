@@ -102,6 +102,19 @@ public listNode deleteAtPosition(int position){
         previous.next=current.next;
         return current;
 }
+public listNode removeKey(int key){
+        listNode current=head;
+        listNode temp=null;
+        while(current!=null && current.data!=key){
+            temp=current;
+            current=current.next;
+        }
+        if(head==null){
+            return null;
+        }
+        temp.next=current.next;
+        return current;
+}
 
     public static void main(String[] args) {
         singlyLinkedList obj = new singlyLinkedList();
@@ -125,6 +138,8 @@ obj.display();
 obj.deleteAtEnd();
 obj.display();
 obj.deleteAtPosition(4);
+obj.display();
+obj.removeKey(20);
 obj.display();
     }
     }
