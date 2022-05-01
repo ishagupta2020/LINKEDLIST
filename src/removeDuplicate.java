@@ -37,6 +37,17 @@ public class removeDuplicate {
                 }
 
             }
+            // search a key in singly linked list
+    public boolean searchKey(int search){
+                Node current=head;
+                while(current!=null){
+                    if(current.data==search){
+                        return true;
+                    }
+                    current=current.next;
+                }
+                return false;
+    }
 
             public static void main(String[] args) {
                 removeDuplicate obj=new removeDuplicate();
@@ -53,6 +64,8 @@ public class removeDuplicate {
                 fifth.next=null;
                 obj.removeDuplicate();
                 obj.display();
+                System.out.println(obj.searchKey(9));
+
 
             }
         }
