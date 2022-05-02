@@ -101,6 +101,7 @@ public class doublyLinkedList {
         obj.insertAtLast(44);
         obj.insertAtLast(87);
 
+
       //  obj.displayForward();
         obj.deleteFirst();
         obj.displayForward();
